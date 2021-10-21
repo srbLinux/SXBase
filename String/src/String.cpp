@@ -31,6 +31,18 @@ const char* String::tostr()
     return this->STR;
 }
 
+void String::operator=(const char* const str)
+{
+    STR = new char(strlen(str));
+    strcpy(this->STR,str);
+}
+
+void String::operator=(String& str)
+{
+    STR = new char(strlen(str.tostr()));
+    strcpy(STR,str.tostr());
+}
+
 String& String::operator+=(String& str)
 {
     strcat(this->STR,str.tostr());

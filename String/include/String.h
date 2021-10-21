@@ -19,12 +19,16 @@ class String
         String(const char* str);
         ~String();
         int size();
-        bool cutstr(char c);
         const char* tostr();
         void operator+(String& str);
         String& operator+=(String& str);
         String& operator[](String& str);
+        void operator=(const char* const str);
+        void operator=(String& str);
         friend void operator+(String& str0,String& str1);
+        friend String& cutstr(String& str0,char c){
+            
+        };
         friend ostream& operator<<(ostream& os,const String str){
             os<<str.STR;
             return os;
