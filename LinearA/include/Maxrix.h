@@ -23,7 +23,7 @@ template<typename T>
 using MaxrixArray = vector<vector<T>>;
 
 
-template<class T>
+template<typename T>
 class Maxrix
 {
     public:
